@@ -1,0 +1,11 @@
+// app.module.ts dosyasını güncelle
+import { Module } from '@nestjs/common';
+import { PrismaModule } from './prisma/prisma.module';
+import { AuthModule } from './auth/auth.module';
+import { TasksModule } from './tasks/tasks.module';
+import { UsersModule } from './users/users.module';
+
+@Module({
+  imports: [PrismaModule, AuthModule, TasksModule, UsersModule],
+})
+export class AppModule {}
